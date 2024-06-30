@@ -26,6 +26,9 @@ function App() {
         })
       );
 
+      // Tri des articles par date de la plus récente à la moins récente
+      postsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
       setPosts(postsData);
     };
 
