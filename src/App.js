@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
 import './App.css';
+import { Buffer } from 'buffer';
+
+
+// Polyfill Buffer globalement
+window.Buffer = window.Buffer || Buffer;
 
 function App() {
   const [posts, setPosts] = useState([]);
